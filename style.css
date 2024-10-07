@@ -196,7 +196,7 @@ header {
     background-color: rgb(137, 226, 255);
     padding: 20px;
     margin: 20px auto;
-    width: 100%;
+    width: 70%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 /* Styling for the left-aligned video and right-aligned text in full-width article */
@@ -272,6 +272,7 @@ header {
         align-items: center;
         flex-wrap: wrap;
     }
+    
 }
 
 /* -----------------------RESUME------------------------------------------------------- */
@@ -468,6 +469,7 @@ header {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
         text-align: right;
         padding: 60px 0px;
+        font-size: small;
     }
     #navbar .menu-icon {
         display: block;
