@@ -1,3 +1,4 @@
+/* --------------------------HTML/BODY---------------------------------------------------- */
 html, body {
     height: 100%;
     overflow: hidden;
@@ -13,52 +14,18 @@ body::before {
     background-color: #0000006b;
     z-index: -1; 
 }
+/* Responsive Styling */
+@media (max-width: 768px) {
+    html, body {
+        overflow: auto;
+    }
 
-/* Navbar Styling */
-#navbar {
-    position: fixed;
-    top: 10px;
-    width: 80%;
-    left: 10%;
-    background-color: rgba(51, 51, 51, 0.8);
-    color: white;
-    padding: 15px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
+    body::before {
+        background-color: #0000004d; /* Lighter overlay for smaller screens */
+    }
 }
 
-#navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#navbar ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-#navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: bold;
-    font-family: 'Arial', sans-serif;
-    padding: 10px 20px;
-    transition: all 0.3s ease;
-    border-radius: 5px;
-}
-
-#navbar ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    font-size: 1.4em;
-    color: #ffcc00;
-    text-decoration: none;
-    cursor: pointer;
-}
+/* ------------------------LINKS------------------------------------------------------ */
 
 .hover-link {
     text-decoration: none;
@@ -69,6 +36,31 @@ body::before {
     color: #ff00e6;
 }
 
+/* -----------------------H1------------------------------------------------------- */
+
+h1 {
+     margin: 0; 
+    font-size: 4em;
+}
+
+/* -----------------------SECTIONS------------------------------------------------------- */
+
+section {
+    height: 100vh;
+    padding: 50px;
+    text-align: center;
+    background-color: #f5f7fa;
+    overflow: scroll;
+}
+@media (max-width: 768px) {
+    section {
+        height: auto; /* Allow the section to adjust its height based on content */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+}
+
+/* --------------------HEADER---------------------------------------------------------- */
+
 /* Header Styling */
 header {
     height: 100vh;
@@ -77,6 +69,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .intro-container {
@@ -116,9 +109,10 @@ header {
 
 .profile-pic {
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 256px;
+    height: 256px;
     object-fit: cover;
+    margin-bottom: 20px;
 }
 
 .intro-right h1 {
@@ -144,226 +138,67 @@ header {
     }
 }
 
-.profile-pic {
-    border-radius: 50%;
-    width: 256px;
-    height: 256px;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-h1 {
-    margin: 0;
-    font-size: 4em;
-}
-
-section {
-    height: 100vh;
-    padding: 50px;
-    text-align: center;
-    background-color: #f5f7fa;
-}
-
-/* Floating Navbar */
-#social-navbar {
-    position: fixed;
-    top: 40%;
-    left: 5px;
-    z-index: 1000;
-    width: 60px;
-    height: auto;
-    background-color: #ffffff00;
-    transition: transform 0.3s ease-in-out;
-}
-
-#social-navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#social-navbar ul li {
-    margin: 10px 0;
-}
-
-#social-navbar ul li a img {
-    width: 55px;
-    height: 55px;
-    display: block;
-    transition: transform 0.3s ease-in-out;
-}
-
-#social-navbar ul li a img:hover {
-    transform: scale(1.5);
-}
-
-#social-navbar ul li a {
-    display: flex;
-    align-items: center;
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-}
-
-#social-navbar ul li a span {
-    opacity: 0;
-    white-space: nowrap;
-    transition: opacity 0.3s ease-in-out;
-}
-
-#social-navbar:hover ul li a span {
-    opacity: 1;
-}
-
-/* Resume Section Styling */
-#resume {
-    padding: 100px;
-    padding-bottom: 200px;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-}
-
-.resume-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-.resume-column {
-    margin-top: 50px;
-    flex: 1;
-    padding: 0 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.resume-column:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-}
-
-.resume-column ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.resume-column ul li {
-    margin-bottom: 25px;
-    border-left: 3px solid #1e00ff;
-    padding-left: 15px;
-}
-
-.resume-column ul li p {
-    margin: 8px 0 0;
-    font-size: 1em;
-    color: #555;
-    line-height: 1.6;
-}
-
-.resume-column ul li strong {
-    font-size: 1.2em;
-    color: #2c3e50;
-}
-
-/* Icon Styling for Section Headers */
-#resume h2, #resume h3 {
-    color: #333;
-    font-family: 'Arial', sans-serif;
-    position: relative;
-    padding-left: 35px;
-}
-
-#resume h2:before, #resume h3:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-family: FontAwesome;
-    color: #1e00ff;
-}
-
-/* Specific Icon Styling */
-#experiences h3:before {
-    content: "\f0b1";
-}
-#education h3:before {
-    content: "\f19d";
-}
-#skills h3:before {
-    content: "\f013";
-}
-
-/* Optional: Make text left-aligned and make headings stand out */
-#resume h3 {
-    text-align: left;
-    border-bottom: 2px solid #1e00ff;
-    padding-bottom: 10px;
-}
-
-#resume ul li p {
-    font-size: 1em;
-    line-height: 1.5;
-    color: #333;
-}
-
-a {
-    color: #2c3e50;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #1e00ff;
-}
-
-/* Responsive Design: Stack columns on small screens */
+/* Responsive Styling */
 @media (max-width: 768px) {
-    .resume-container {
+    header {
+        height: auto;
+        padding: 20px;
+    }
+
+    .intro-container {
         flex-direction: column;
+        padding: 0 20px;
+        flex-wrap: wrap;
+        margin: 20px;
+    }
+
+    .intro-right {
+        order: -1; /* Move the profile picture above the intro text */
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the profile picture */
+        width: 100%;
+    }
+
+    .intro-left {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .typewriter {
+        font-size: 1.8em;
+        white-space: normal; /* Allow text to wrap */
+        width: auto; /* Allow text to wrap */
+    }
+
+    .intro-left p {
+        font-size: 1.2em;
+        word-wrap: break-word; /* Ensure content wraps within the screen */
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .intro-right h1 {
+        font-size: 2em;
     }
 }
 
+/* -----------------------PROJECTS------------------------------------------------------- */
+
+#projects {
+    overflow: scroll;
+}
 #projects article {
     background-color: rgb(137, 226, 255);
     padding: 20px;
     margin: 20px auto;
-    max-width: 70%;
+    width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-#contact {
-    height: 100vh;
-    padding-left: 256px;
-    padding-top: 196px;
-    text-align: left;
-    display: block;
-    margin: 0;
-    background-color: #f5f7fa;
-}
-
-#icon {
-    width: 32px;
-    height: 32px;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-
-ul {
-    list-style: none;
-    padding-inline-start: 0px;
-}
-
-li {
-    line-height: 1.8em;
-    font-size: 1.2em;
-}
-
 /* Styling for the left-aligned video and right-aligned text in full-width article */
 .game.left-align, .game.right-align {
     display: grid;
@@ -422,15 +257,350 @@ li {
     font-family: 'Arial', sans-serif;
     color: #555;
 }
-
 /* Responsive behavior for smaller screens */
 @media (max-width: 768px) {
     .game.left-align, .game.right-align {
         grid-template-columns: 1fr;
+        text-align: center;
     }
 
     .game-video, .game-info {
         max-width: 100%;
         text-align: center;
     }
+}
+
+/* -----------------------RESUME------------------------------------------------------- */
+
+/* Resume Section Styling */
+#resume {
+    height: 100vh;
+    padding-left: 100px;
+    padding-top: 80px;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+    overflow: scroll; 
+    background-color: #f9f9f9;
+}
+
+.resume-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.resume-column {
+    margin-top: 50px;
+    flex: 1;
+    padding: 0 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resume-column:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.resume-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resume-column ul li {
+    margin-bottom: 25px;
+    border-left: 3px solid #1e00ff;
+    padding-left: 15px;
+}
+
+.resume-column ul li p {
+    margin: 8px 0 0;
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+.resume-column ul li strong {
+    font-size: 1.2em;
+    color: #2c3e50;
+}
+
+/* Icon Styling for Section Headers */
+#resume h2, #resume h3 {
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    padding-left: 35px;
+    text-align: center; 
+    font-size: 1.5em; 
+    margin-bottom: 20px;
+}
+
+#resume h2:before, #resume h3:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: FontAwesome;
+    color: #1e00ff;
+}
+
+/* Specific Icon Styling */
+#experiences h3:before {
+    content: "\f0b1";
+}
+#education h3:before {
+    content: "\f19d";
+}
+#skills h3:before {
+    content: "\f013";
+}
+
+/* Optional: Make text left-aligned and make headings stand out */
+#resume h3 {
+    text-align: left;
+    border-bottom: 2px solid #1e00ff;
+    padding-bottom: 10px;
+}
+
+#resume ul li p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .resume-column {
+        max-width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+        flex: 1 1 100%;
+    }
+
+    #resume {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+    }
+
+    #resume h2, #resume h3 {
+        font-size: 1.5em;
+    }
+}
+
+/* -----------------------NAVBAR------------------------------------------------------- */
+/* Navbar Styling */
+#navbar {
+    position: fixed;
+    top: 10px;
+    width: 80%;
+    left: 10%;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    padding: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+#navbar .menu-icon {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+#navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 1.4em;
+    color: #ffcc00;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    #navbar {
+        background-color: rgba(51, 51, 51, 0);
+        border-radius: 0px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+        text-align: right;
+        padding: 60px 0px;
+    }
+    #navbar .menu-icon {
+        display: block;
+        color: #333;
+    }
+    #navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    #navbar ul li a {
+        color: black;
+    }
+    #navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    #navbar ul.show {
+        display: flex;
+    }
+}
+
+/* -----------------------FLOATING NAVBAR------------------------------------------------------- */
+
+/* Floating Navbar */
+#social-navbar {
+    position: fixed;
+    top: 40%;
+    left: 5px;
+    z-index: 1000;
+    width: 60px;
+    height: auto;
+    background-color: #ffffff00;
+    transition: transform 0.3s ease-in-out;
+}
+
+#social-navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#social-navbar ul li {
+    margin: 10px 0;
+}
+
+#social-navbar ul li a img {
+    width: 55px;
+    height: 55px;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+#social-navbar ul li a img:hover {
+    transform: scale(1.5);
+}
+
+#social-navbar ul li a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#social-navbar ul li a span {
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#social-navbar:hover ul li a span {
+    opacity: 1;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #social-navbar {
+        top: auto;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #social-navbar ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #social-navbar ul li {
+        margin: 0 5px;
+    }
+
+    #social-navbar ul li a img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* -----------------------CONTACT SECTION------------------------------------------------------- */
+#contact {
+    height: 100vh;
+    padding-left: 256px;
+    padding-top: 196px;
+    text-align: left;
+    display: block;
+    margin: 0;
+    background-color: #f5f7fa;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    #contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+        padding-top: 20px;
+        text-align: center;
+    }
+}
+
+#icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+ul {
+    list-style: none;
+    padding-inline-start: 0px;
+}
+
+li {
+    line-height: 1.8em;
+    font-size: 1.2em;
 }

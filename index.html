@@ -9,7 +9,8 @@
 <body>
     <!-- Floating Navigation Bar -->
     <nav id="navbar">
-        <ul>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#resume">Resume</a></li>
@@ -37,7 +38,7 @@
     </header>
 
     <!-- Projects Section -->
-    <section id="projects" style = "overflow: scroll;">
+    <section id="projects">
 
         <article class="game left-align">
             <div class="game-video">
@@ -129,23 +130,23 @@
     </section>
 
 <!-- Resume Section -->
-<section id="resume" style="overflow: auto; padding-top: 100px; padding-bottom: 100px; background-color: #f9f9f9;">
-    <h2 style="text-align: center; font-size: 2em; margin-bottom: 20px;">Download my Resume for more information on my Experience & Projects</h2>
+<section id="resume">
+    <h2>Download my Resume for more information on my Experience & Projects</h2>
     <strong style="display: block; text-align: center; margin-bottom: 40px;">
         <a href="./HeenaThadani_Resume.pdf" download style="text-decoration: none; color: #007bff; font-size: 1.2em; border: 2px solid #007bff; padding: 10px 20px; border-radius: 5px;">Download Resume</a>
     </strong>
 
-    <div class="resume-container" style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; padding-bottom: 200px;;">
+    <div class="resume-container">
         <!-- First Column: Experience and Projects -->
-        <div class="resume-column" style="flex: 1; min-width: 300px; max-width: 45%; background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <div class="resume-column">
             <!-- Experience Section -->
             <div id="experiences">
-                <h3 style="font-size: 1.5em; margin-bottom: 10px;"><i class="fa fa-briefcase"></i> Professional Experience</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 20px;">
+                <h3><i class="fa fa-briefcase"></i> Professional Experience</h3>
+                <ul>
+                    <li>
                         <i><strong><a href="https://www.petals.studio/" class="hover-link">Shipped Title - Calyx Chronicles</a></strong></i><br>
                         <strong>Multiplayer Matchmaking UI/UX Developer</strong> - Petals World Studio, Singapore
-                        <p style="margin: 10px 0;">• Translated Figma designs into Unity for front-end development. Implemented full-stack for friend list functionality using Quantum in PUN.<br>  
+                        <p>• Translated Figma designs into Unity for front-end development. Implemented full-stack for friend list functionality using Quantum in PUN.<br>  
                            • Created lobby screens and integrated matchmaking systems.<br>
                            • Authored player statistics screens for in-game data.<br>
                            • Implemented leaderboards.<br>
@@ -155,7 +156,7 @@
                     </li>
                     <li>
                         <strong><a href="https://github.com/heenathadani/VR-Mitacs" class="hover-link">Collaboration in Mixed Reality</a></strong> - Mitacs GRI (2022)
-                        <p style="margin: 10px 0;">• Generated an interface for storage of connected player activities for reference in virtual reality games using Photon Unity Networking and PlayerPrefs for disconnected players.<br>
+                        <p>• Generated an interface for storage of connected player activities for reference in virtual reality games using Photon Unity Networking and PlayerPrefs for disconnected players.<br>
                            • Conducted simulations on Meta Quest 2.<br>
                            • Created a heat map of an ocean using provided longitude, latitude, and depth data in Blender.
                         </p>
@@ -165,12 +166,12 @@
         </div>
 
         <!-- Second Column: Education and Skills -->
-        <div class="resume-column" style="flex: 1; min-width: 300px; max-width: 45%; background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+        <div class="resume-column">
             <!-- Education Section -->
             <div id="education">
-                <h3 style="font-size: 1.5em; margin-bottom: 10px;"><i class="fa fa-graduation-cap"></i> Education</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 20px;">
+                <h3><i class="fa fa-graduation-cap"></i> Education</h3>
+                <ul>
+                    <li>
                         <strong>MS in Game Design & Development</strong> <em>CGPA : 3.85/4.0</em><br>
                         Rochester Institute of Technology (2023 - 2025)
                     </li>
@@ -183,11 +184,11 @@
 
             <!-- Skills Section -->
             <div id="skills">
-                <h3 style="font-size: 1.5em; margin-bottom: 10px;"><i class="fa fa-cogs"></i> Skills</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 10px;"><strong>Programming Languages:</strong> C++, C#, Python, Java, JavaScript</li>
-                    <li style="margin-bottom: 10px;"><strong>Game Engines:</strong> Unity3D, Unreal Engine, Pygame</li>
-                    <li style="margin-bottom: 10px;"><strong>UI/UX Design:</strong> Figma</li>
+                <h3><i class="fa fa-cogs"></i> Skills</h3>
+                <ul>
+                    <li><strong>Programming Languages:</strong> C++, C#, Python, Java, JavaScript</li>
+                    <li><strong>Game Engines:</strong> Unity3D, Unreal Engine, Pygame</li>
+                    <li><strong>UI/UX Design:</strong> Figma</li>
                     <li><strong>Version Control:</strong> Git/GitHub, Plastic SCM, Perforce</li>
                 </ul>
             </div>
@@ -225,6 +226,7 @@
             </li>
         </ul>
     </section>
+    
     <!--Social Navbar-->
     <nav id="social-navbar">
         <ul>
