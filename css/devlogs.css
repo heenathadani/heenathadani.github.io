@@ -1,0 +1,19 @@
+html,body{
+    height: auto;
+    overflow: auto;
+}
+
+section{
+    height: auto;
+    padding: 50px;
+    text-align: left;
+    background-color: #f5f7fa;
+    overflow: visible;
+}
+
+level-design{
+    text-align: left;
+    padding: 50px;
+    text-decoration-color: aqua;
+    font-size: 28px;
+}
