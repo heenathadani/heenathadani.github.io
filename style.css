@@ -186,6 +186,20 @@ header {
         font-size: 2em;
     }
 }
+/* -----------------------Level Design -------------------------------------------------------*/
+#level-design{
+    overflow: scroll;
+    padding: 100px;
+    text-align: center;
+    background-color: #f5f7fa;
+}
+#level-design img {
+    margin-top: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 
 /* -----------------------PROJECTS------------------------------------------------------- */
 
@@ -249,6 +263,24 @@ header {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
+}
+.devlog-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-top: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.devlog-btn:hover {
+    background-color: #0056b3;
 }
 
 /* Responsive behavior for larger screens */
