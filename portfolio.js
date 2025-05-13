@@ -1,3 +1,24 @@
+window.onload = function () {
+    loadHTML("level-design-section","level-design.html");
+    loadHTML("projects-section", "projects.html");
+    loadHTML("resume-section", "resume.html");""
+    loadHTML("contact-section","contact.html")
+  };
+  
+function loadHTML(id, file) {
+fetch(file)
+    .then(response => {
+    if (!response.ok) throw new Error(`Failed to load ${file}`);
+    return response.text();
+    })
+    .then(html => {
+    document.getElementById(id).innerHTML = html;
+    })
+    .catch(error => console.error(error));
+}
+
+
+
 // Smooth scrolling for navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
