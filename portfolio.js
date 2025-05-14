@@ -1,8 +1,10 @@
 window.onload = function () {
+    loadHTML("homepage-section","homepage.html");
     loadHTML("level-design-section","level-design.html");
     loadHTML("projects-section", "projects.html");
     loadHTML("resume-section", "resume.html");""
     loadHTML("contact-section","contact.html")
+    loadHTML("social-navbar-section","social.html");
   };
   
 function loadHTML(id, file) {
