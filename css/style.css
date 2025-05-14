@@ -74,16 +74,21 @@ header {
 
 .intro-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     max-width: 1200px;
     width: 100%;
-    padding: 0 50px;
+    padding: 40px 60px;
+    gap: 100px;
 }
 
 .intro-left {
     flex: 1;
-    padding-right: 70px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 36px;
+    text-align: justify;
+    align-items: center;
 }
 
 .typewriter {
@@ -97,26 +102,26 @@ header {
 }
 
 .intro-left p {
-    font-size: 1.5em;
+    font-size: 1.35em;
     margin-top: 20px;
 }
 
-.intro-right {
-    flex: 1;
-    text-align: center;
-    text-wrap: nowrap;
-}
-
-.profile-pic {
+.intro-left img.profile-pic {
     border-radius: 50%;
     width: 256px;
     height: 256px;
     object-fit: cover;
+    margin-bottom: 10px;
+    margin-top: 36px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.intro-left h2 {
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
-.intro-right h1 {
-    margin-top: 20px;
+.intro-left h1 {
+    margin-top: 10px;
     font-size: 2.5em;
 }
 
@@ -173,7 +178,7 @@ header {
     }
 
     .intro-left p {
-        font-size: 1.2em;
+        font-size: 1.0em;
         word-wrap: break-word; /* Ensure content wraps within the screen */
     }
 
@@ -186,6 +191,64 @@ header {
         font-size: 2em;
     }
 }
+/* -----------------------Gallery------------------------------------------------------- */
+.home-categories {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+.home-categories-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    height: 100%;
+}
+
+.category-box {
+    background-color: #fff;
+    padding: 60px 80px; /* Bigger box */
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #1e00ff;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-left {
+        padding: 0;
+        text-align: center;
+    }
+
+    .home-categories-vertical {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .category-box {
+        width: 80%;
+    }
+}
+
 /* -----------------------Level Design -------------------------------------------------------*/
 #level-design{
     overflow: scroll;
@@ -526,8 +589,8 @@ lite-youtube.lyt-activated > .lty-playbtn {
 #navbar {
     position: fixed;
     top: 10px;
-    width: 80%;
-    left: 10%;
+    width: 40%;
+    left: 30%;
     background-color: rgba(51, 51, 51, 0.8);
     color: white;
     padding: 15px 0;
