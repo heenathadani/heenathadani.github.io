@@ -589,8 +589,8 @@ lite-youtube.lyt-activated > .lty-playbtn {
 #navbar {
     position: fixed;
     top: 10px;
-    width: 40%;
-    left: 30%;
+    width: 70%;
+    left: 15%;
     background-color: rgba(51, 51, 51, 0.8);
     color: white;
     padding: 15px 0;
