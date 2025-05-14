@@ -45,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
             fetch(devlogPage, { method: "HEAD" })
                 .then(response => {
                     if (response.status === 404) {
-                        alert("Devlog coming soon!");
                         event.preventDefault();
                     }
                 })
