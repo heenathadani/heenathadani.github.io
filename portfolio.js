@@ -5,6 +5,7 @@ window.onload = function () {
     loadHTML("resume-section", "resume.html");""
     loadHTML("contact-section","contact.html")
     loadHTML("social-navbar-section","social.html");
+    
   };
   
 function loadHTML(id, file) {
@@ -18,6 +19,7 @@ fetch(file)
     })
     .catch(error => console.error(error));
 }
+
 
 
 

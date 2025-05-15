@@ -267,7 +267,7 @@ header {
 /* -----------------------PROJECTS------------------------------------------------------- */
 
 #projects {
-    overflow: auto;
+    overflow: scroll;
     padding: 20px;
 }
 
@@ -788,4 +788,20 @@ ul {
 li {
     line-height: 1.8em;
     font-size: 1.2em;
+}
+
+.category-box-link {
+  text-decoration: none;
+}
+
+.project-bg{
+   background-image: url('../Images/projects-background.png'); 
+}
+
+.ui-bg{
+
+}
+
+.otherwork-bg{
+   background-image: url('../Images/otherwork-background.png'); 
 }
