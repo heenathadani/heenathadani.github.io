@@ -1,7 +1,7 @@
 /* --------------------------HTML/BODY---------------------------------------------------- */
 html, body {
     height: 100%;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 body::before {
@@ -46,11 +46,11 @@ h1 {
 /* -----------------------SECTIONS------------------------------------------------------- */
 
 section {
-    height: 100vh;
+    min-height: 100vh;
     padding: 50px;
     text-align: center;
     background-color: #f5f7fa;
-    overflow: scroll;
+    
 }
 @media (max-width: 768px) {
     section {
@@ -251,7 +251,7 @@ header {
 
 /* -----------------------Level Design -------------------------------------------------------*/
 #level-design{
-    overflow: scroll;
+    overflow: visible;
     padding: 100px;
     text-align: center;
     background-color: #f5f7fa;
@@ -267,7 +267,7 @@ header {
 /* -----------------------PROJECTS------------------------------------------------------- */
 
 #projects {
-    overflow: scroll;
+    overflow: visible;
     padding: 20px;
 }
 
@@ -458,7 +458,7 @@ lite-youtube.lyt-activated > .lty-playbtn {
 
 /* Resume Section Styling */
 #resume {
-    height: 100vh;
+    min-height: 100vh;
     padding-left: 100px;
     padding-top: 80px;
     background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
@@ -466,7 +466,7 @@ lite-youtube.lyt-activated > .lty-playbtn {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     font-family: 'Arial', sans-serif;
     line-height: 1.5;
-    overflow: scroll; 
+    overflow: visible; 
     background-color: #f9f9f9;
 }
 
