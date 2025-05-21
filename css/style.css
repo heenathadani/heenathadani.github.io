@@ -208,23 +208,72 @@ header {
     height: 100%;
 }
 
+
+
 .category-box {
-    background-color: #fff;
-    padding: 60px 80px; /* Bigger box */
+    position: relative;
+    height: 185px;
+    width: 250px;
     border-radius: 12px;
+    overflow: hidden;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #1e00ff;
-    text-align: center;
-    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.category-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+.category-index{
+    z-index: 1;
+    filter: brightness(100%);
+    
+    
 }
+
+
+.category-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(60%);
+    z-index: 0;
+    transition: filter 0.3s ease;
+}
+
+
+
+
+
+.category-box:hover .category-bg {
+    filter: brightness(100%);
+}
+
+.category-text {
+    position: relative;
+    z-index: 1;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow:
+        -0.55px -0.55px 0 #000,
+         0.55px -0.55px 0 #000,
+        -0.55px  0.55px 0 #000,
+         0.55px  0.55px 0 #000;
+}
+
+.category-box-link {
+    text-decoration: none;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
 
 @media (max-width: 768px) {
     .intro-container {
@@ -794,9 +843,23 @@ li {
 }
 
 .project-bg{
-   background-image: url('../Images/projects-background.png'); 
+   background-image: url('../Images/projects-background.png');
+   filter: brightness(60%);
+   z-index: 0;
+
 }
 
+.ui-bg{
+    background-image: url('../Images/uiux-background.png');
+    filter: brightness(60%); 
+    z-index: 0;
+}
 .otherwork-bg{
-   background-image: url('../Images/otherwork-background.png'); 
+   background-image: url('../Images/otherwork-background.png');
+   filter: brightness(60%); 
+   z-index: 0;
+}
+
+.project-bg:hover, .ui-bg:hover, .otherwork-bg:hover {
+    filter: brightness(100%);
 }
