@@ -23,27 +23,203 @@
             challenging waves, and use strategic dodging and counters to stay alive.</p>
     </section>
 
-    
-    <section>
-        <h2>Timeline</h2>
-        <p>January 2025 - April 2025</p>
-    </section>
-
     <section>
         <h2>Team Size</h2>
         <p>Individual Project</p>
     </section>
 
     <section>
-        <h2>Role</h2>
-        <p>UI/UX Designer, Gameplay Programmer</p>
+        <h2>Role & Skills</h2>
+        <p>
+            <li>UI/UX Designer, Gameplay Programmer</li>
+            <li>Unreal Engine 5, C++, Figma, Canva, Gameplay Ability System (GAS)</li>
+        </p>
     </section>
 
     <section>
         <h2>Processes, Reflections, & References</h2>
         <p>
-            Coming soon! This section will detail the design process, challenges faced, and solutions implemented during the development of Devblade.
+        <h2>Production Plan:</h2>
+        <img style="width: auto; height: auto;" src="../Images/devblade-1.png" alt="devlade-1.png">
+        <h2>Gameplay:</h2>
+        <h3>✅ Core Feature Summary</h3>
+        
+        <table border="1" cellspacing="0" cellpadding="8" style="border-collapse: collapse; width: 100%;">
+            <thead style="background-color: #f2f2f2;">
+                <tr>
+                    <th>System</th>
+                    <th>Highlights</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>⚔️ <strong>Combat System</strong></td>
+                    <td>Light/Heavy combos, direction-based hit reactions, block/parry, rage & special abilities</td>
+                </tr>
+                <tr>
+                    <td>🧠 <strong>Enemy AI</strong></td>
+                    <td>Behavior Trees, EQS, crowd avoidance, ranged & melee archetypes, flanking & ambush logic</td>
+                </tr>
+                <tr>
+                    <td>⚙️ <strong>Gameplay Ability System</strong></td>
+                    <td>Prioritized abilities (Roll > Block > Attack), stat-based scaling, instancing, soft references</td>
+                </tr>
+                <tr>
+                    <td>🎮 <strong>Input & Animation</strong></td>
+                    <td>Gameplay Tags, input mapping via data assets, modular animation layers</td>
+                </tr>
+                <tr>
+                    <td>🔁 <strong>Game Loop</strong></td>
+                    <td>Survival waves, spawn/death logic, win/lose states, enemy scaling</td>
+                </tr>
+                <tr>
+                    <td>🧩 <strong>UI/UX</strong></td>
+                    <td>Combat feedback (hit shake, UI notify), health/ability/Rage indicators, menus</td>
+                </tr>
+                <tr>
+                    <td>🎯 <strong>Target Lock System</strong></td>
+                    <td>Track/switch enemies, update widgets, lock animations</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <img style="width: auto; height: auto;" src="../Images/devblade-2.png" alt="devlade-2.png">
+        <br>
+        <img style="width: 750px; height: 400px;" src="../Images/devblade-3.png" alt="devlade-3.png">
+        <img style="width: 1050px; height: 400px;" src="../Images/devblade-4.png" alt="devlade-4.png">
+        <br>
+        <img style="width: auto; height: auto;" src="../Images/devblade-5.png" alt="devlade-5.png">
+        <h3>⚔️ Combat System Design</h3>
+        <table border="1" cellspacing="0" cellpadding="8" style="border-collapse: collapse; width: 100%;">
+            <thead style="background-color: #f2f2f2;">
+                <tr>
+                    <th>Component</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Light/Heavy Attack</td>
+                    <td>Animation-independent combo system</td>
+                </tr>
+                <tr>
+                    <td>Damage Scaling</td>
+                    <td>Based on combo count and attributes</td>
+                </tr>
+                <tr>
+                    <td>Directional Hit React</td>
+                    <td>Calculated via gameplay direction vector</td>
+                </tr>
+                <tr>
+                    <td>Special Abilities</td>
+                    <td>Includes Rage, Healing, and Weapon-specific</td>
+                </tr>
+                <tr>
+                    <td>Hit Detection</td>
+                    <td>Controlled via AnimNotifyState (weapon collider toggles)</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <hr>
+        
+        <h3>🤖 Enemy AI Architecture</h3>
+        <table border="1" cellspacing="0" cellpadding="8" style="border-collapse: collapse; width: 100%;">
+            <thead style="background-color: #f2f2f2;">
+                <tr>
+                    <th>AI Module</th>
+                    <th>Features</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Behavior Trees</strong></td>
+                    <td>Modular BT with Decorators, Services, Tasks</td>
+                </tr>
+                <tr>
+                    <td><strong>EQS (Environment Query System)</strong></td>
+                    <td>Context-based flanking, ranged positions</td>
+                </tr>
+                <tr>
+                    <td><strong>AI Crowd Avoidance</strong></td>
+                    <td>Detour Crowd Config for TPS scenarios</td>
+                </tr>
+                <tr>
+                    <td><strong>Enemy Types</strong></td>
+                    <td>Melee (Guardian), Ranged (Projectile), Boss (Summons minions)</td>
+                </tr>
+                <tr>
+                    <td><strong>Enemy Actions</strong></td>
+                    <td>Chance-based attack, ability use, projectile damage</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <hr>
+        
+        <h3>🎯 Gameplay Ability System (GAS)</h3>
+        <table border="1" cellspacing="0" cellpadding="8" style="border-collapse: collapse; width: 100%;">
+            <thead style="background-color: #f2f2f2;">
+                <tr>
+                    <th>Feature</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ability Priorities</td>
+                    <td>Roll &gt; Block &gt; Attack</td>
+                </tr>
+                <tr>
+                    <td>Instancing</td>
+                    <td>Per Execution / Per Actor</td>
+                </tr>
+                <tr>
+                    <td>Soft References</td>
+                    <td>Used for loading enemy/player data</td>
+                </tr>
+                <tr>
+                    <td>Damage Logic</td>
+                    <td>Custom calculation from attributes</td>
+                </tr>
+                <tr>
+                    <td>Tags & Triggers</td>
+                    <td>Native Gameplay Tags for input binding & effects</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <hr>
+        
+        <h3>📊 Stat System</h3>
+        <table border="1" cellspacing="0" cellpadding="8" style="border-collapse: collapse; width: 100%;">
+            <thead style="background-color: #f2f2f2;">
+                <tr>
+                    <th>Entity</th>
+                    <th>Tracked Attributes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Player</td>
+                    <td>Health, Rage, Attack, Defense</td>
+                </tr>
+                <tr>
+                    <td>Enemies</td>
+                    <td>Health, Attack Power, Defense</td>
+                </tr>
+                <tr>
+                    <td>Boss</td>
+                    <td>Spawns minions, uses unique abilities</td>
+                </tr>
+            </tbody>
+        </table>
         </p>
+    </section>
+
+    <section>
+        <h2>Timeline</h2>
+        <p>January 2025 - April 2025</p>
     </section>
 
 </body>
