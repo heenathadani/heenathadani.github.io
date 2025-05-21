@@ -467,7 +467,6 @@ lite-youtube.lyt-activated > .lty-playbtn {
     font-family: 'Arial', sans-serif;
     line-height: 1.5;
     overflow: visible; 
-    background-color: #f9f9f9;
 }
 
 .resume-container {
@@ -796,10 +795,6 @@ li {
 
 .project-bg{
    background-image: url('../Images/projects-background.png'); 
-}
-
-.ui-bg{
-
 }
 
 .otherwork-bg{
