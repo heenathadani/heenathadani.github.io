@@ -158,7 +158,7 @@ header {
     }
 
     .intro-right {
-        order: -1; /* Move the profile picture above the intro text */
+        order: 0; /* Move the profile picture above the intro text */
         margin-bottom: 20px;
         display: flex;
         flex-direction: column;
@@ -167,6 +167,7 @@ header {
     }
 
     .intro-left {
+        order:-1;
         padding-right: 0;
         text-align: center;
     }
@@ -294,7 +295,13 @@ header {
     }
 
     .category-box {
-        width: 80%;
+        width: 200px;
+        height: 185px;
+    }
+
+    .category-bg {
+        height: 100%; /* 👈 background fills parent */
+        width: 100%;
     }
 }
 
