@@ -234,11 +234,13 @@ header {
     padding-bottom: 40px;
 }
 .home-categories-vertical {
-    display: flex;
-    flex-direction: column;
+     display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
     justify-content: center;
-    height: 100%;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
 }
 
 
@@ -278,10 +280,6 @@ header {
     z-index: 0;
     transition: filter 0.3s ease;
 }
-
-
-
-
 
 .category-box:hover .category-bg {
     filter: brightness(100%);
@@ -324,6 +322,8 @@ header {
         align-items: center;
         width: 100%;
         margin-top: 30px;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .category-box {
@@ -899,6 +899,12 @@ li {
    z-index: 0;
 }
 
-.project-bg:hover, .ui-bg:hover, .otherwork-bg:hover {
+.code-snippets-bg{
+    background-image: url('../Images/devblade-2.png');
+    filter: brightness(60%); 
+    z-index: 0;
+}
+
+.project-bg:hover, .ui-bg:hover, .otherwork-bg:hover, .code-snippets-bg:hover {
     filter: brightness(100%);
 }
