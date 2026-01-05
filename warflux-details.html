@@ -58,23 +58,7 @@
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
         <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Projects</a></li>
         <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i>What I can do!</a></li>
-        <!-- <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Other Work</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-          <ul>
-            <li><a href="#">Dropdown 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Dropdown 2</a></li>
-            <li><a href="#">Dropdown 3</a></li>
-            <li><a href="#">Dropdown 4</a></li>
-          </ul>
-        </li> -->
+        <li><a href="https://docs.google.com/document/d/1eeX8DoMAB0M4WiGQ9hbqYDFtJiL_Xad_afi1yLbO6ho/edit?usp=sharing"><i class="bi bi-link-45deg navicon"></i>Code Snippets</a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
       </ul>
     </nav>
@@ -131,15 +115,15 @@
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Warflux-Details/warflux-gallery-2.png" alt="">
+                  <img src="assets/img/portfolio/Warflux-Details/warflux-1.png" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/gifs/devblade.gif" alt="">
+                  <img src="assets/img/portfolio/gifs/warflux.gif" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/devblade-4.png" alt="">
+                  <img src="assets/img/portfolio/Warflux-Details/warflux-2.png" alt="">
                 </div>
 
               </div>
@@ -151,71 +135,59 @@
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Devlog</h3>
               <ul>
-                <li><strong>Download link</strong>: <a href="https://shinzozs.itch.io/devblade" target="_blank">https://shinzozs.itch.io/devblade</a></li>
+                <li><strong>Download link</strong>: <a href="https://shinzozs.itch.io/warflux-anachronistic-chaos" target="_blank">https://shinzozs.itch.io/warflux-anachronistic-chaos</a></li>
               </ul>
             </div>
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
               <h2>Processes and Reflections:</h2>
               <p>
-                I built a melee-focused prototype centered on responsive combat, ability-driven decision-making, 
-                and enemies that pressure the player with coordinated tactics.
+                This is a third person action shooter game build in Unity Engine made to fulfill the capstone project requirements 
+                for the Game Design and Development Master Program at Rochester Institute of Technology.
               </p>
             </div>
           </div>
 
           <div>
-            <h4>Combat System:</h4>
-              <p>I implemented an animation-independent combo framework that supports light/heavy chains, 
-                with damage scaling driven by combo count and character attributes so the pacing stays rewarding as you 
-                commit to longer strings. I also integrated weapon hit detection via 
-                AnimNotifyState-driven collider toggles to keep timing precise and avoid “always-on” collision.
+            <h4>Procedural Dungeon Generator:</h4>
+              <p>I implemented a scalable Procedural Dungeon Generator using modular room prefabs and a DFS-based layout algorithm. 
+                The system recursively subdivides the dungeon space to find space for rooms and corridors, ensuring connectivity and variety in each run. 
+                I added features like doorways, spawn points, and environmental props to enhance immersion and gameplay flow.
               </p>
               
-            <div style="scale: 0.98;">
-              <img src="assets/img/portfolio/Details/devblade-5.png" alt=""/>
+            <div>
+                  <img src="assets/img/portfolio/gifs/warflux.gif" alt="" class="img-fluid" style="padding-bottom: 20px;"/>
             </div>
-            <h4>Defense System:</h4>
-              <p>To make fights feel readable and skill-based, I added block/parry interactions alongside direction-based hit reactions
-                computed from the gameplay direction vector, so impacts communicate both force and angle. 
-                This tightened feedback loops and helped players understand why they were staggered (or why a counter succeeded).
-              </p>
             
-            <h4>Special Stat-driven Abilities:</h4>
-              <p>I designed special abilities including Rage, healing, and weapon-specific actions, 
-                backed by a stat system (Curve Tables, Data Assets, etc) tracking player and enemy attributes (health, attack/defense, Rage) 
-                for consistent balancing and tuning. This allowed moment-to-moment combat decisions to be influenced by build/state rather than hardcoded damage values.
+            <h4>Onboarding Systems:</h4>
+              <p>I developed a full circle onboarding system for the game inspired by <b>Fortnite</b>, 
+                which includes tutorials for basic actions like shooting, movement, using melee weapons, picking up loot, and using player abilities, etc.
+
               </p>
 
-            <div style="scale: 0.9;">  
-              <img src="assets/img/portfolio/Details/devblade-2.png" alt=""/>
+            <div>
+                  <img src="assets/img/portfolio/gifs/onboarding.gif" alt="" class="img-fluid" style="padding-bottom: 20px;"/>
             </div>
 
-            <h4>Gameplay Ability System & Input/Tags</h4>
-            <p>Using GAS, I structured abilities with explicit priorities (Roll > Block > Attack) to prevent input conflicts and ensure defensive actions reliably preempt offense. 
-              I wired native Gameplay Tags for input binding/effects, supported per-execution/per-actor instancing where appropriate, 
-              and used soft references for cleaner data loading and modularity.
+            <h4>Ability & Loot Systems:</h4>
+            <p>I built a robust ability system (heal, shield, grenade, teleport abilities) using Unity’s ScriptableObjects to define modular abilities with cooldowns, stats, and effects. 
+              The system supports easy addition of new abilities and integrates with the player’s stats and input handling for fluid gameplay. 
+              The ability class handles activation, interaction logic, cooldown management, and effect application, allowing for diverse player strategies.
+              Additionally, I created a loot system that spawns weapons, health packs, and ability pickups throughout the dungeon, 
+              encouraging exploration and tactical decision-making.
             </p>
 
-            <h4>Enemy AI (Behavior Trees + EQS flanking/ambush positioning):</h4>
-            <p>I authored a modular AI stack using Behavior Trees (decorators, services, tasks) and 
-              EQS to select context-aware positions—supporting flanking logic and ranged spacing instead of “run straight at the player” behavior. 
-              Crowd avoidance (Detour Crowd) was configured to reduce clumping in multi-enemy scenarios and keep fights legible during wave pressure.</p>
-
-            <h4>Survival Gamemode: </h4>
-            <p>I implemented multiple enemy archetypes (melee, ranged projectile, boss that summons minions) with chance-based action selection to vary attack cadence and reduce predictability. 
-              The core loop supports survival waves with spawn/death handling, win/lose states, and enemy scaling to maintain challenge across longer runs.</p>
-
-            <div style="scale: 0.9;">
-              <img src="assets/img/portfolio/Details/devblade-3.png" alt=""/>
+            <div>
+              <img src="assets/img/portfolio/gifs/grenade.gif"  class="img-fluid" style="height: 600px; padding-bottom: 20px;"/>
             </div>
-            <h4>Target Lock and Combat Feedback:</h4>
-            <p>I built a target-lock system to track and switch targets while updating widgets and lock-aware animations, improving control in crowded fights. 
-              On the UI side, I implemented combat feedback (hit shake/notifications) and HUD indicators for health/abilities/Rage plus menus to keep player state clear 
-              under pressure.
-            </p>
 
-            <div style="scale: 0.9;">
-              <img src="assets/img/portfolio/Details/devblade-1.png" alt=""/>
+            <h4>UI Systems:</h4>
+            <p>I worked on the game's UI systems, which manage all in-game screens and HUD elements, ensuring seamless transitions, real-time updates, and a modular structure. 
+              The UI system is composed of UI managers, individual UI Pages (for inventory, settings, HUD, etc.), and data-binding components that reflect game state changes instantly.
+              The goal was to create a flexible, scalable system that makes UI updates intuitive for players, 
+              minimizing complexity while maximizing clarity and responsiveness.</p>
+
+            <div>
+              <img src="assets/img/portfolio/Warflux-Details/warflux-3.png"  class="img-fluid" style="width: 80%; display: block;"/>
             </div>
 
           </div>
